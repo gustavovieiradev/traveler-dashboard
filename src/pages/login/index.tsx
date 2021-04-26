@@ -1,18 +1,16 @@
 import { Box, Button, Flex, Heading, Icon, Image, Input, Text } from "@chakra-ui/react";
 import { FiAlertCircle } from 'react-icons/fi';
+import { HalfPage } from "../../components/HalfPage";
+import { InputLogin } from "../../components/InputLogin";
 
 export default function Login() {
   return (
     <Flex direction="row" w="100vw" h="100vh">
-      <Flex flex="1">
-        <Image src="/images/backlogin.png" />
-      </Flex>
+      <HalfPage />
       <Flex flex="1" align="center" justify="center" bgColor="gray.200">
         <Flex direction="column" align="flex-start">
           <Heading fontWeight="600" mb="44px">Fazer login</Heading>
-          <Box height="72px" w="416px" borderWidth={1} borderColor="gray.300" bg="white" borderTopRadius={10} p="24px">
-            <Input variant="unstyled" placeholder="E-mail" _placeholder={{ color: 'gray.500' }} color="gray.500" />
-          </Box>
+          <InputLogin />
           <Box height="72px" w="416px" borderEndWidth={1} borderLeftWidth={1} borderBottomWidth={1} borderColor="gray.300" bg="white" borderBottomRadius={10} p="24px">
             <Input variant="unstyled" placeholder="Password" _placeholder={{ color: 'gray.500' }} color="gray.500" type="password" />
           </Box>
